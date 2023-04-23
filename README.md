@@ -14,7 +14,7 @@ devspace dev
 - open [localhost:3000](http://localhost:3000/)
 - Login:
     - username: admin
-    - password: password
+    - password: prom-operator
 
 ## TODO's
 

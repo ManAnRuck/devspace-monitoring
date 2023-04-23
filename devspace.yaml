@@ -9,7 +9,7 @@ deployments:
         repo: https://prometheus-community.github.io/helm-charts
       values:
         grafana:
-          adminPassword: password
+          adminPassword: prom-operator
 
 dev:
   grafana:
