@@ -9,7 +9,15 @@ deployments:
         repo: https://prometheus-community.github.io/helm-charts
       values:
         grafana:
-          adminPassword: password
+          adminPassword: prom-operator
+          persistentVolume:
+            existingClaim: kube-prometheus-stack-pvc
+        alertmanager:
+          persistentVolume:
+            existingClaim: kube-prometheus-stack-pvc
+        server:
+          persistentVolume:
+            existingClaim: kube-prometheus-stack-pvc
 
 dev:
   grafana:
