@@ -1,0 +1,19 @@
+version: v2beta1
+name: monitoring
+
+deployments:
+  prometheus-stack:
+    helm:
+      chart:
+        name: kube-prometheus-stack
+        repo: https://prometheus-community.github.io/helm-charts
+      values:
+        grafana:
+          adminPassword: password
+
+dev:
+  grafana:
+    labelSelector:
+      app.kubernetes.io/name: grafana
+    ports:
+      - port: '3000:3000'
